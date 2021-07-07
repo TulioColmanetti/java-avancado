@@ -1,6 +1,7 @@
 package br.com.digital.innovation.one.aula2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -23,10 +24,9 @@ public class Iteracoes {
         profissoes.stream()
                 .filter(profissao -> profissao.startsWith("Gerente"))
                 .forEach(System.out::println);
-
     }
 
-
+//    3 dots mean the same as [], to denote an array of
     public static void imprirmirNomesFiltrados(String... nomes){
 
         String nomesParaImprimir= "";
@@ -35,23 +35,19 @@ public class Iteracoes {
               nomesParaImprimir+=""+nomes[i];
             }
         }
-
         System.out.println("Nomes do for: "+nomesParaImprimir);
-
 
         String nomesparaImprimirDaStream = Stream.of(nomes)
                 .filter(nome -> nome.equals("Joao"))
                 .collect(Collectors.joining());// String
-
         System.out.println("Nomes do stream: "+nomesparaImprimirDaStream);
-
 
 //        String nomesResultados = Stream.of(nomes).filter(nome -> nome.equals("Joao"))
 //                .collect(Collectors.joining());
 //        System.out.println(nomesResultados);
     }
 
-
+//    3 dots mean the same as [], to denote an array of
     public static void imprirmirTodosNomes(String... nomes){
         for (String nome : nomes) {
             System.out.println("Imprimido pelo for: "+nome);
@@ -61,6 +57,7 @@ public class Iteracoes {
                 .forEach(nome -> System.out.println("Imprimido pelo forEach: "+nome));
     }
 
+//    3 dots mean the same as [], to denote an array of
     public static void imprirmirODobroDeCadaItemDaLista(Integer... numeros){
         for (Integer numero : numeros) {
             System.out.println(numero*2);
